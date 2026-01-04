@@ -1,0 +1,51 @@
+{
+    "name": "alfthegreatest/laravel-social-share-buttons",
+    "description": "Optional package for Laravel to generate social share links.",
+    "keywords": [
+        "share",
+        "social links",
+        "social share links"
+    ],
+    "homepage": "https://github.com/alfthegreatest/laravel-social-share-buttons",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aliaksandr Broika",
+            "email": "aliaksandr.broika@gmail.com",
+            "homepage": "https://github.com/alfthegreatest/laravel-social-share-buttons",
+            "role": "Web Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alfthegreatest\\Share\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alfthegreatest\\Share\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alfthegreatest\\Share\\Providers\\ShareServiceProvider"
+            ],
+            "aliases": {
+                "Share": "Alfthegreatest\\Share\\ShareFacade"
+            }
+        }
+    }
+}
