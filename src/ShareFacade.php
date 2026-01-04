@@ -1,6 +1,6 @@
 <?php
 
-namespace Jorenvh\Share;
+namespace Alfthegreatest\Share;
 
 use Illuminate\Support\Facades\Facade;
 
