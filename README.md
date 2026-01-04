@@ -17,7 +17,7 @@ With Laravel Share you can generate these links in just seconds in a way tailore
 You can install the package via composer:
 
 ``` bash
-composer require alfthegreatest/laravel-share
+composer require alfthegreatest/laravel_social-share-buttons
 ```
 
 
