@@ -72,37 +72,37 @@ Load jquery.min.js & share.js by adding the following lines to your template fil
 #### Facebook
 
 ``` php
-Share::page('http://alfthegreatest.be')->facebook();
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons')->facebook();
 ```
 
 #### Twitter
 
 ``` php
-Share::page('http://alfthegreatest.be', 'Your share text can be placed here')->twitter();
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Your share text can be placed here')->x();
 ```
 
 #### Reddit
 
 ``` php
-Share::page('http://alfthegreatest.be', 'Your share text can be placed here')->reddit();
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Your share text can be placed here')->reddit();
 ```
 
 #### Linkedin
 
 ``` php
-Share::page('http://alfthegreatest.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Share title')->linkedin('Extra linkedin summary can be passed here')
 ```
 
 #### Whatsapp
 
 ``` php
-Share::page('http://alfthegreatest.be')->whatsapp()
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons')->whatsapp()
 ```
 
 #### Telegram
 
 ``` php
-Share::page('http://alfthegreatest.be', 'Your share text can be placed here')->telegram();
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Your share text can be placed here')->telegram();
 ```
 
 ### Sharing the current url
@@ -118,9 +118,9 @@ Share::currentPage()->facebook();
 If want multiple share links for (multiple) providers you can just chain the methods like this.
 
 ```php
-Share::page('http://alfthegreatest.be', 'Share title')
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Share title')
 	->facebook()
-	->twitter()
+	->x()
 	->linkedin('Extra linkedin summary can be passed here')
 	->whatsapp();
 ```
@@ -130,10 +130,10 @@ This will generate the following html
 ```html
 <div id="social-links">
 	<ul>
-		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://alfthegreatest.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
-		<li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://alfthegreatest.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
-		<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://alfthegreatest.be&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
-		<li><a href="https://wa.me/?text=http://alfthegreatest.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
+		<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
+		<li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
+		<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
+		<li><a href="https://wa.me/?text=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
 	</ul>
 </div>
 ```
@@ -144,7 +144,7 @@ In some cases you may only need the raw links without any html, you can get thes
 
 **A single link**
 ```php
-Share::page('http://alfthegreatest.be', 'Share title')
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Share title')
 	->facebook()
 	->getRawLinks();
 ```
@@ -152,15 +152,15 @@ Share::page('http://alfthegreatest.be', 'Share title')
 Outputs:
 
 ```html 
-https://www.facebook.com/sharer/sharer.php?u=http://alfthegreatest.be
+https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons
 ```
 
 **Multiple links**
 
 ```php
-Share::page('http://alfthegreatest.be', 'Share title')
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Share title')
 	->facebook()
-	->twitter()
+	->x()
 	->linkedin('Extra linkedin summary can be passed here')
 	->whatsapp()
     ->getRawLinks();
@@ -170,10 +170,10 @@ Outputs:
 
 ```
 [
-  "facebook" => "https://www.facebook.com/sharer/sharer.php?u=http://alfthegreatest.be",
-  "twitter" => "https://twitter.com/intent/tweet?text=Share+title&url=http://alfthegreatest.be",
-  "linkedin" => "http://www.linkedin.com/shareArticle?mini=true&url=http://alfthegreatest.be&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here",
-  "whatsapp" => "https://wa.me/?text=http://alfthegreatest.be",
+  "facebook" => "https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons",
+  "twitter" => "https://twitter.com/intent/tweet?text=Share+title&url=https://github.com/alfthegreatest/laravel_social-share-buttons",
+  "linkedin" => "http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/alfthegreatest/laravel_social-share-buttons&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here",
+  "whatsapp" => "https://wa.me/?text=https://github.com/alfthegreatest/laravel_social-share-buttons",
 ]
 ```
 
@@ -184,7 +184,7 @@ Outputs:
 You can simply add extra class(es), id('s), title(s) or relationship(s) by passing an array as the third parameter on the page method.
 
 ```php
-Share::page('http://alfthegreatest.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title', 'rel' => 'nofollow noopener noreferrer'])
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title', 'rel' => 'nofollow noopener noreferrer'])
     ->facebook();
 ```
 
@@ -193,7 +193,7 @@ Which will result in the following html
 ```html
 <div id="social-links">
 	<ul>
-		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://alfthegreatest.be" class="social-button my-class" id="my-id" rel="nofollow noopener noreferrer"><span class="fa fa-facebook-official"></span></a></li>
+		<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button my-class" id="my-id" rel="nofollow noopener noreferrer"><span class="fa fa-facebook-official"></span></a></li>
 	</ul>
 </div>
 ```
@@ -213,7 +213,7 @@ By default social links will be wrapped in the following html
 This can be customised by passing the prefix & suffix as a parameter.
 
 ```php
-Share::page('http://alfthegreatest.be', null, [], '<ul>', '</ul>')
+Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', null, [], '<ul>', '</ul>')
             ->facebook();
 ```
 
@@ -221,7 +221,7 @@ This will output the following html.
 
 ```html
 <ul>
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://alfthegreatest.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
 </ul>
 ```
 
