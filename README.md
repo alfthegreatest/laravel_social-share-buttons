@@ -6,15 +6,13 @@ With Laravel Share you can generate these links in just seconds in a way tailore
 ### Available services
 
 * Facebook
-* Twitter
+* X(Twitter)
 * Linkedin
 * WhatsApp
 * Reddit
 * Telegram
 
-## Installation
-
-You can install the package via composer:
+## Installation via composer:
 
 ``` bash
 composer require alfthegreatest/laravel_social-share-buttons
@@ -49,12 +47,14 @@ php artisan vendor:publish --provider="Alfthegreatest\Share\Providers\ShareServi
 
 This will publish the ```laravel-share.php``` config file to your config folder, ```share.js``` in ```public/js/``` and ```laravel-share.php``` in your ```resources/lang/vendor/en/``` folder.
 
+
 ### Fontawesome
 
 Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
 You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
 
 Laravel share supports Font Awesome v5. For Font Awsome 4 support use version [3] of this package. 
+
 
 ### Javascript
 
@@ -75,7 +75,7 @@ Load jquery.min.js & share.js by adding the following lines to your template fil
 Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons')->facebook();
 ```
 
-#### Twitter
+#### X(Twitter)
 
 ``` php
 Share::page('https://github.com/alfthegreatest/laravel_social-share-buttons', 'Your share text can be placed here')->x();
@@ -130,13 +130,14 @@ This will generate the following html
 ```html
 <div id="social-links">
 	<ul>
-		<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
-		<li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
-		<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
-		<li><a href="https://wa.me/?text=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
+		<li><a target='_blank' href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
+		<li><a target='_blank' href="https://twitter.com/intent/tweet?text=my share text&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
+		<li><a target='_blank' href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
+		<li><a target='_blank' href="https://wa.me/?text=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
 	</ul>
 </div>
 ```
+
 
 ### Getting the raw links
 
@@ -193,7 +194,7 @@ Which will result in the following html
 ```html
 <div id="social-links">
 	<ul>
-		<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button my-class" id="my-id" rel="nofollow noopener noreferrer"><span class="fa fa-facebook-official"></span></a></li>
+		<li><a target='_blank' href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button my-class" id="my-id" rel="nofollow noopener noreferrer"><span class="fa fa-facebook-official"></span></a></li>
 	</ul>
 </div>
 ```
@@ -221,13 +222,15 @@ This will output the following html.
 
 ```html
 <ul>
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
+	<li><a target='_blank' href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
 </ul>
 ```
+
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
 
 ## Testing
 
@@ -235,13 +238,16 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 $ composer test
 ```
 
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
+
 ## Security
 
 If you discover any security related issues, please email aliaksandr.broika@gmail.com instead of using the issue tracker.
+
 
 ## Credits
 
