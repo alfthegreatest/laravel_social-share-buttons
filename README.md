@@ -131,7 +131,7 @@ This will generate the following html
 <div id="social-links">
 	<ul>
 		<li><a target='_blank' href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
-		<li><a target='_blank' href="https://twitter.com/intent/tweet?text=my share text&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
+		<li><a target='_blank' href="https://x.com/intent/tweet?text=my share text&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
 		<li><a target='_blank' href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/alfthegreatest/laravel_social-share-buttons&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
 		<li><a target='_blank' href="https://wa.me/?text=https://github.com/alfthegreatest/laravel_social-share-buttons" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
 	</ul>
@@ -172,7 +172,7 @@ Outputs:
 ```
 [
   "facebook" => "https://www.facebook.com/sharer/sharer.php?u=https://github.com/alfthegreatest/laravel_social-share-buttons",
-  "twitter" => "https://twitter.com/intent/tweet?text=Share+title&url=https://github.com/alfthegreatest/laravel_social-share-buttons",
+  "x" => "https://x.com/intent/tweet?text=Share+title&url=https://github.com/alfthegreatest/laravel_social-share-buttons",
   "linkedin" => "http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/alfthegreatest/laravel_social-share-buttons&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here",
   "whatsapp" => "https://wa.me/?text=https://github.com/alfthegreatest/laravel_social-share-buttons",
 ]
